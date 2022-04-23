@@ -20,8 +20,8 @@ const loginSchema = new Schema({
         min:6,
         max:64
     },
-    student : [{type: ObjectId,ref : "Student"}],
-    academicStaff : [{type: ObjectId,ref : "AcademicStaff"}],
+    student : {type: ObjectId,ref : "Student"},
+    academicStaff : {type: ObjectId,ref : "AcademicStaff"},
 },{timestamps:true});
 
 export default mongoose.model('Login',loginSchema);
