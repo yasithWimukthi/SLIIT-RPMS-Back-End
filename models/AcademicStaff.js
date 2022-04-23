@@ -25,12 +25,6 @@ const academicStaffSchema = new Schema({
         required: true,
         unique: true
     },
-    password:{
-        type:String,
-        trim:true,
-        min:6,
-        max:64
-    },
     faculty:{
         type: String,
         trim: true,
