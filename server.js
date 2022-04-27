@@ -1,11 +1,12 @@
-const express = require('express');
-const bodyParser = require('body-parser');
-const cookieParser = require('cookie-parser');
-const mongoose = require('mongoose');
-require('dotenv').config()
-const morgan = require('morgan');
+import express from "express";
+import bodyParser from "body-parser";
+import morgan from "morgan";
+import cookieParser from "cookie-parser";
+import mongoose from "mongoose";
+import dotenv from "dotenv";
+dotenv.config();
 
-
+import authRoutes from "./routes/auth.js";
 const app = express();
 
 app.use(bodyParser.json());
@@ -23,7 +24,7 @@ app.use((req, res, next) => {
 });
 
 
-// app.use('/auth', authRoutes);
+app.use('/auth', authRoutes);
 
 app.use((error, req, res, next) => {
     console.log(error);

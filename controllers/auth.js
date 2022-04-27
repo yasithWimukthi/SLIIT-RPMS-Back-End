@@ -1,9 +1,9 @@
-import Student from "../models/Student";
-import Login from "../models/Login";
-import AcademicStaff from "../models/AcademicStaff";
+import Login from "../models/Login.js";
+import AcademicStaff from "../models/AcademicStaff.js";
+import Student from "../models/Student.js";
+import jwt from "jsonwebtoken";
+import bcrypt from "bcryptjs";
 
-const bcrypt = require('bcryptjs');
-const jwt = require('jsonwebtoken');
 
 export const studentSignUp = async (req, res,next) => {
     const {
