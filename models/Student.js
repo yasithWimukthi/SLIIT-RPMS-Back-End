@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 
-const {Schema} = mongoose;
+const {Schema, ObjectId} = mongoose;
 
 const studentSchema = new Schema({
     name:{
@@ -39,6 +39,7 @@ const studentSchema = new Schema({
         url : String,
         public_id : String
     },
+    login : {type: ObjectId,ref : "Login"},
 
 },{timestamps:true});
 

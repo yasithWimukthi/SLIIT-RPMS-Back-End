@@ -1,11 +1,12 @@
-const express = require('express');
-const bodyParser = require('body-parser');
-const cookieParser = require('cookie-parser');
-const mongoose = require('mongoose');
-require('dotenv').config()
-const morgan = require('morgan');
+import express from "express";
+import bodyParser from "body-parser";
+import morgan from "morgan";
+import cookieParser from "cookie-parser";
+import mongoose from "mongoose";
+import dotenv from "dotenv";
+dotenv.config();
 
-
+import authRoutes from "./routes/auth.js";
 const app = express();
 
 app.use(bodyParser.json());
@@ -39,8 +40,8 @@ mongoose
     )
     .then(() => {
         app.listen(process.env.PORT || 8000);
-
+        console.log('Connected to database');
     })
     .catch(err => {
-
+        console.log(err);
     });
