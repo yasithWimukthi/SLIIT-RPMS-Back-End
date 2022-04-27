@@ -23,7 +23,7 @@ app.use((req, res, next) => {
 });
 
 
-app.use('/auth', authRoutes);
+// app.use('/auth', authRoutes);
 
 app.use((error, req, res, next) => {
     console.log(error);
@@ -39,8 +39,8 @@ mongoose
     )
     .then(() => {
         app.listen(process.env.PORT || 8000);
-
+        console.log('Connected to database');
     })
     .catch(err => {
-
+        console.log(err);
     });
