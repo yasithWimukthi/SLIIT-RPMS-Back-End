@@ -35,6 +35,10 @@ const studentSchema = new Schema({
         trim: true,
         required: true
     },
+    researchGroup:{
+        type: ObjectId,
+        ref: "ResearchGroup"
+    },
     image:{
         url : String,
         public_id : String
