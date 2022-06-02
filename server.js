@@ -30,7 +30,7 @@ app.use('/auth', authRoutes);
 app.use('/api/student', studentRoutes);
 
 
-app.use((error, req, res, next) => {
+app.use((error, req, res) => {
     console.log(error);
     const status = error.statusCode || 500;
     const message = error.message;
