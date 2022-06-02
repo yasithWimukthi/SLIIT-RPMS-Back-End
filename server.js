@@ -7,6 +7,8 @@ import dotenv from "dotenv";
 dotenv.config();
 
 import authRoutes from "./routes/auth.js";
+import studentRoutes from "./routes/Student";
+
 const app = express();
 
 app.use(bodyParser.json());
@@ -25,6 +27,8 @@ app.use((req, res, next) => {
 
 
 app.use('/auth', authRoutes);
+app.use('/api/student', studentRoutes);
+
 
 app.use((error, req, res, next) => {
     console.log(error);
