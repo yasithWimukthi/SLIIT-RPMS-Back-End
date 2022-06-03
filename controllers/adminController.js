@@ -5,7 +5,7 @@ import Template from "../models/Template.js";
 import firebaseSave from "../utils/firebaseSave.js";
 import mongoose from "mongoose";
 
-
+//Get All Academic Staff
 export const getAllAcademicStaff = async (req, res, next) => {
   try {
     const academics = await AcademicStaff.find({});
@@ -21,6 +21,7 @@ export const getAllAcademicStaff = async (req, res, next) => {
   }
 };
 
+//Get all panel members
 export const getAllPanelMembers = async (req, res, next) => {
   try {
     const panelMembers = await AcademicStaff.find();
