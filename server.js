@@ -2,9 +2,6 @@ import express from "express";
 import bodyParser from "body-parser";
 import cookieParser from "cookie-parser";
 import mongoose from "mongoose";
-import multer from "multer";
-import fs from "fs";
-import path from "path";
 import dotenv from "dotenv";
 
 import authRoutes from "./routes/auth.js";
@@ -39,7 +36,7 @@ app.use("/api/acedemicStaff", acedemicStaffRoutes);
 app.use("/api/chat", chatRoutes);
 
 
-app.use((error, req, res, next) => {
+app.use((error, req, res) => {
     console.log(error);
     const status = error.statusCode || 500;
     const message = error.message;
