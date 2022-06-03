@@ -18,7 +18,7 @@ export const addResearchGroup = async (req, res, next) => {
 
 
     const members = [leaderId, secondMemberId, thirdMemberId, fourthMemberId]
-    
+
 
     try {
         const researchGroup = new ResearchGroup({
