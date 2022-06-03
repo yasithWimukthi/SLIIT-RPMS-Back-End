@@ -12,7 +12,7 @@ import {
     topicSubmitionDetailsOfStaffMember,
     acceptTopic,
     declineTopic
-} from '../../../Assignments/SLIIT-RMS-Back-End/controllers/researchGroupController.js'
+} from '../controllers/researchGroupController.js'
 import {
     coSupervisorRequestAccept,
     coSupervisorRequestDecline,
